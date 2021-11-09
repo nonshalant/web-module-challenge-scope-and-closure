@@ -89,11 +89,11 @@ function finalScore(inningcb, numOfIngs){
   /*Code Here*/
   for(let i = 0; i < numOfIngs; i++){
     const obj ={
-      home: inningcb(),
-      away: inningcb()
+      Home: inningcb(),
+      Away: inningcb()
     }
     return obj;
-    
+  }
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
