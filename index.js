@@ -28,11 +28,13 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+  Counter1 is a invoking a function with closure.
   
   2. Which of the two uses a closure? How can you tell?
+  The count1 because inside the function has another function being called.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better?  Count1 would be able to be passed around as a callback function.
 */
 
 // counter1 code
@@ -64,6 +66,8 @@ NOTE: This will be a callback function for the tasks below
 
 function inning(/*Code Here*/){
     /*Code Here*/
+     return Math.floor(Math.random() * 2 );
+
 }
 
 
@@ -81,8 +85,15 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inningcb, numOfIngs){
   /*Code Here*/
+  for(let i = 0; i < numOfIngs; i++){
+    const obj ={
+      home: inningcb(),
+      away: inningcb()
+    }
+    return obj;
+    
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
